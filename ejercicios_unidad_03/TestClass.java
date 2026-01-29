@@ -14,7 +14,9 @@ public class TestClass {
         //ejercicio07();
         //ejercicio08();
         //ejercicio09();
-        ejercicio10();
+        //ejercicio10();
+        //ejercicio11();
+        ejercicio12();
     }
 
     public static void ejercicio01() {
@@ -214,5 +216,48 @@ public class TestClass {
         obj[0] = new int[2];
         obj[1] = new int[2][];
         obj[2] = new Object[2];
+    }
+    
+    public static void ejercicio11(){
+        /*
+        Given the statement int[][]nums=new int[1][3]; how manu int values can nums store?
+        Write down how each elements of nums can be addressed
+        */
+        int[][]nums=new int[1][3];
+        
+        System.out.println("Total values: "+nums.length * nums[0].length);
+        //Cantidad de datos que se pueden direccionar:
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                System.out.println("nums["+i+"]["+j+"]");
+            }
+        }
+        
+    }
+    
+    public static void ejercicio12(){
+        /*
+        Given the following code:
+        
+        int[][]nums=new int [1][4][2];
+        for(int i = 0;i<nums.length;i++){
+            for(int j = 0; j<nums[i].length;j++){
+                for(int k = 0; k<nums[i][j].length;k++){
+                    nums[i][j][k] = i+j+k;
+                       
+                }
+            }
+        }
+        */
+        int[][][]nums = new int [1][4][2];
+        for(int i = 0;i<nums.length;i++){
+            for(int j = 0; j<nums[i].length;j++){
+                for(int k = 0; k<nums[i][j].length;k++){
+                    nums[i][j][k] = i+j+k;
+                      System.out.println("num["+i+"]["+j+"]["+k+"] = "+nums[i][j][k]); 
+                }
+            }
+        }
+        
     }
 }
